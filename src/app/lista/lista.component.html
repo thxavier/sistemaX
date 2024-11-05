@@ -1,0 +1,29 @@
+<div class="lista-container">
+  <h1>Olá, {{ usuarioLogado }}</h1>
+  <h2>Lista de Pessoas</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Apelido</th>
+        <th>CPF</th>
+        <th>Data de Nascimento</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pessoa of pessoas">
+        <td>{{ pessoa.nome }}</td>
+        <td>{{ pessoa.apelido }}</td>
+        <td>{{ pessoa.cpf }}</td>
+        <td>{{ pessoa.dataNascimento }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="button-container">
+    <button (click)="irParaCadastro()">Cadastrar Pessoa</button>
+    <button (click)="voltarHome()">Voltar para Home</button>
+  </div>
+</div>

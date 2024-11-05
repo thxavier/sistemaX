@@ -1,0 +1,11 @@
+<div class="home-container">
+  <button class="logout-button" (click)="logout()">Sair</button>
+  <h2>Bem-vindo, {{ usuarioLogado }}!</h2>
+  <p>Esta é a tela inicial do sistema.</p>
+  
+  <div class="button-container">
+    <button (click)="navigateToCadastro()">Ir para Tela de Cadastro de Usuário</button>
+    <button (click)="navigateToLista()">Ir para Tela de Lista de Pessoas</button>
+    <button (click)="navigateToCadastroPessoas()">Cadastro de Pessoas</button>
+  </div>
+</div>

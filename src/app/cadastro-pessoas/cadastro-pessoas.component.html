@@ -1,0 +1,14 @@
+<div class="cadastro-container">
+    <h2>Cadastro de Pessoas</h2>
+    <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+      <input formControlName="cpf" placeholder="CPF" required />
+      <input formControlName="nome" placeholder="Nome" required />
+      <input formControlName="apelido" placeholder="Apelido" />
+      <input formControlName="dataNascimento" type="date" placeholder="Data de Nascimento" required />
+      <button type="submit" [disabled]="cadastroForm.invalid">Cadastrar</button>
+    </form>
+    <div class="button-container">
+        <button (click)="voltarHome()">Voltar para Home</button>
+        <button (click)="irParaLista()">Ir para Lista</button>
+      </div>
+</div>
